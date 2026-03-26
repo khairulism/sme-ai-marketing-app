@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#F8F7F4" />
+  <meta name="description" content="AI Marketing lessons for SME bosses in Singapore, Malaysia & Indonesia" />
+  <title>SME AI Marketing</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+</head>
+<body>
+  <div class="app">
+
+    <!-- Progress Bar -->
+    <div class="progress-bar">
+      <div class="progress-track">
+        <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+      </div>
+      <span class="progress-label" id="progress-label">Lesson 0 of 6</span>
+    </div>
+
+    <!-- ===================== LESSON 0 ===================== -->
+    <div class="screen active" id="screen-0">
+
+      <div class="lesson-header">
+        <div class="lesson-badge">
+          <span class="lesson-badge-dot"></span>
+          Lesson 0
+        </div>
+        <h1 class="lesson-title">How Does Your Website Look to AI?</h1>
+        <p class="lesson-subtitle">Before we begin — let's see where you stand</p>
+      </div>
+
+      <!-- URL Check Form -->
+      <form class="check-form" id="check-form" novalidate>
+        <div class="input-group">
+          <input
+            type="url"
+            id="website-url"
+            class="url-input"
+            placeholder="yourwebsite.com"
+            autocomplete="url"
+            inputmode="url"
+          />
+          <button type="submit" class="check-btn" id="check-btn">
+            Check
+          </button>
+        </div>
+      </form>
+
+      <!-- Result Card -->
+      <div class="result-card hidden" id="result-card">
+
+        <div class="result-row" id="result-google">
+          <span class="result-icon">✅</span>
+          <span class="result-label">You're on Google Search</span>
+          <span class="result-status found">Found</span>
+        </div>
+
+        <div class="result-row" id="result-ai">
+          <span class="result-icon">⚠️</span>
+          <span class="result-label">You're on AI search</span>
+          <span class="result-status warning">Not found on AI yet</span>
+        </div>
+
+        <p class="result-note" id="result-note">
+          Most businesses don't realize they're invisible to AI search.
+        </p>
+      </div>
+
+      <!-- Callout -->
+      <div class="callout">
+        <div class="callout-label">Truth</div>
+        <p class="callout-text">
+          By the end of this app, you'll have your business visible inside ChatGPT, Perplexity, and Gemini.
+        </p>
+      </div>
+
+      <!-- Micro Task -->
+      <div class="micro-task">
+        <div class="micro-task-label">Your Micro Task</div>
+        <p class="micro-task-text">
+          Add your website to <strong>Noodleseed</strong> — takes 1 minute. This helps AI engines find and understand your business.
+        </p>
+      </div>
+
+      <!-- CTA -->
+      <button class="btn btn-primary hidden" id="start-lesson-1" onclick="appNav.nextLesson()">
+        Start Lesson 1
+        <span aria-hidden="true">→</span>
+      </button>
+
+      <!-- Fallback CTA always visible -->
+      <button class="btn btn-primary mt-16" id="start-lesson-1-alt" onclick="appNav.nextLesson()">
+        Start Lesson 1
+        <span aria-hidden="true">→</span>
+      </button>
+
+    </div>
+    <!-- =================== END LESSON 0 =================== -->
+
+    <!-- ===================== LESSON 1 ===================== -->
+    <div class="screen" id="screen-1">
+
+      <div class="lesson-header">
+        <div class="lesson-badge">
+          <span class="lesson-badge-dot"></span>
+          Lesson 1
+        </div>
+        <h1 class="lesson-title">You Already Use AI</h1>
+        <p class="lesson-subtitle">Surprise — you already use AI every day</p>
+      </div>
+
+      <!-- Insight -->
+      <div class="insight-block">
+        <p class="insight-text">
+          Every time you search on Google, you're using AI.
+        </p>
+      </div>
+
+      <!-- Icon Cards -->
+      <div class="icon-cards">
+
+        <div class="icon-card">
+          <div class="icon-card-icon">🔍</div>
+          <div class="icon-card-body">
+            <div class="icon-card-title">Google Search</div>
+            <div class="icon-card-desc">AI answering your questions in milliseconds</div>
+          </div>
+        </div>
+
+        <div class="icon-card">
+          <div class="icon-card-icon">🎙️</div>
+          <div class="icon-card-body">
+            <div class="icon-card-title">Siri / Google Assistant</div>
+            <div class="icon-card-desc">AI listening and acting on your voice commands</div>
+          </div>
+        </div>
+
+        <div class="icon-card">
+          <div class="icon-card-icon">📺</div>
+          <div class="icon-card-body">
+            <div class="icon-card-title">Netflix Recommendations</div>
+            <div class="icon-card-desc">AI learning your taste better than you know it</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Callout -->
+      <div class="callout">
+        <div class="callout-label">Truth</div>
+        <p class="callout-text">
+          AI isn't a new subject to study. It's a new tool your team can use. Your job isn't to learn AI — it's to point it at the right problem.
+        </p>
+      </div>
+
+      <!-- Micro Task -->
+      <div class="micro-task">
+        <div class="micro-task-label">Your Micro Task</div>
+        <p class="micro-task-text">
+          Think of <strong>one thing</strong> in your business that takes too much time. Write it down. That's what AI can help with.
+        </p>
+      </div>
+
+      <!-- CTA -->
+      <button class="btn btn-primary" onclick="appNav.nextLesson()">
+        Lesson 2
+        <span aria-hidden="true">→</span>
+      </button>
+
+    </div>
+    <!-- =================== END LESSON 1 =================== -->
+
+  </div><!-- /.app -->
+
+  <script src="app.js"></script>
+</body>
+</html>
