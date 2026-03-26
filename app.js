@@ -29,7 +29,7 @@
   function updateProgress(lessonIndex) {
     const pct = Math.round((lessonIndex / TOTAL_LESSONS) * 100);
     progressFill.style.width = pct + '%';
-    progressLabel.textContent = 'Lesson ' + lessonIndex + ' of ' + TOTAL_LESSONS;
+    progressLabel.textContent = `Lesson ${lessonIndex} of ${TOTAL_LESSONS}`;
   }
 
   function nextLesson() {
@@ -79,12 +79,10 @@
       checkBtn.innerHTML = '<span class="spinner"></span> Checking...';
 
       // Simulate API check (replace with real check in production)
-      // For MVP, we do a simple fetch to see if the site responds
       let googleFound = false;
       let aiFound = false;
 
       try {
-        // Check if site is reachable (CORS may block, but worth a try)
         const controller = new AbortController();
         const timeoutId = setTimeout(() => controller.abort(), 5000);
 
@@ -94,16 +92,12 @@
           signal: controller.signal
         });
         clearTimeout(timeoutId);
-        // no-cors means we can't know status, but if it didn't error we got something
         googleFound = true;
       } catch {
-        // If fetch fails, site might be down or blocking
-        // For MVP, we'll mark it as found if no network error
         googleFound = true; // Most sites are on Google just by existing
       }
 
       // AI presence: for MVP, simulate based on domain patterns
-      // Real implementation would use an AI search API
       const aiIndicators = ['shopify', 'wix', 'squarespace', 'wordpress', 'webflow'];
       aiFound = aiIndicators.some(brand => normalizedUrl.includes(brand));
 
@@ -115,9 +109,7 @@
       resultCard.classList.remove('hidden');
 
       // Show start lesson 1 button
-      if (startLesson1Btn) startLesson1Btn.classList.remove('hidden');
-      const altBtn = document.getElementById('start-lesson-1-alt');
-      if (altBtn) altBtn.classList.add('hidden');
+      startLesson1Btn.classList.remove('hidden');
     });
   }
 
